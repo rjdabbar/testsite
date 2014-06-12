@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TestSite</title>
+  <title>Rehash</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -10,5 +10,24 @@
 
 <%= yield %>
 
+<!--=== Copyright ===-->
+<div class="copyright">
+    <div class="container">
+
+        <div class="row-fluid">
+            <div class="span8">                     
+                <p><a href="mailto:info@rehashstudio.com">info@rehashstudio.com</a> | <a href="">+1 (718) 208-8429</a></p>
+            </div>
+            <div class="span4"> 
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/rehashstudio" data-original-title="Facebook" class="facebook"></a></li>
+                    <li><a href="http://twitter.com/RehashStudio" data-original-title="Twitter" class="twitter"></a></li>
+                    <li><a href="http://www.linkedin.com/company/re-studio" data-original-title="Linkedin" class="linkedin"></a></li>
+                </ul>
+            </div>
+        </div><!--/row-fluid-->
+
+    </div><!--/container--> 
+</div><!--/copyright--> 
 </body>
 </html>

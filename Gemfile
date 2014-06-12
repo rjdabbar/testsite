@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'simple_form'
+gem 'font-awesome-rails'
 
 group :development do
   gem "better_errors"

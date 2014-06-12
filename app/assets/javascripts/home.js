@@ -1,7 +1,33 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+// # Place all the behaviors and hooks related to the matching controller here.
+// # All this logic will automatically be available in application.js.
+// # You can use CoffeeScript in this file: http://coffeescript.org/
 
+
+//FOR SOME REASON THESE TWO METHODS DO NOT MAKE THE VIEW BUTTON SHOW UP ON THE BIG FRONT PAGE CAROUSELL
+
+ // $('.bxslider').bxSlider({
+ //        minSlides: 1,
+ //        maxSlides: 4,
+ //        slideWidth: 250,
+ //        slideMargin: 10,
+ //        speed: 500,
+ //         });
+
+    jQuery(document).ready(function() {
+    App.init();
+});
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39599528-1', 'rehashstudio.com');
+  ga('send', 'pageview');
+
+   $(function() {
+    $('#da-slider').cslider();
+  });
 
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-csstransforms-csstransitions-touch-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load
@@ -993,7 +1019,7 @@ var scrolltotop={
   //startline: Integer. Number of pixels from top of doc scrollbar is scrolled before showing control
   //scrollto: Keyword (Integer, or "Scroll_to_Element_ID"). How far to scroll document up when control is clicked on (0=top).
   setting: {startline:100, scrollto: 0, scrollduration:1000, fadeduration:[500, 100]},
-  controlHTML: '<img src="../assets/img/up.png" style="width:51px; height:42px" />', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
+  controlHTML: '<img src="/assets/up.png" style="width:51px; height:42px" />', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
   controlattrs: {offsetx:5, offsety:5}, //offset of control relative to right/ bottom of window corner
   anchorkeyword: '#top', //Enter href value of HTML anchors on the page that should also act as "Scroll Up" links
 
