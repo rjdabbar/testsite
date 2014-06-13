@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  headline: MyString
+  body: MyText
+  client: MyText
+  agency: MyText
+  partner: MyText
+  excerpt: MyText
+  main_image: MyString
+  thumbnail_lrg: MyString
+  thumbnail_smcategory: MyText
+
+two:
+  title: MyString
+  headline: MyString
+  body: MyText
+  client: MyText
+  agency: MyText
+  partner: MyText
+  excerpt: MyText
+  main_image: MyString
+  thumbnail_lrg: MyString
+  thumbnail_smcategory: MyText
