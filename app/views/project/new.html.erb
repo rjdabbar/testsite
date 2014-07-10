@@ -1,2 +1,39 @@
-<h1>Project#new</h1>
-<p>Find me in app/views/project/new.html.erb</p>
+
+<div class="project-form">
+      <%= form_for @project, :url => project_path(:title),  :html => { :multipart => true }, action: :create do |form| %>
+
+        <%= form.label :title, "Title" %>
+        <%= form.text_field :title %>
+
+        <%= form.label :headline, "Headline" %>
+        <%= form.text_field :headline %>
+
+        <%= form.label :body, "Body" %>
+        <%= form.text_area :body %>
+
+        <%= form.label :partner, "Partner" %>
+        <%= form.text_field :partner %>
+
+        <%= form.label :excerpt, "Excerpt" %>
+        <%= form.text_field :excerpt %>
+
+        <%= form.label :client, "Client" %>
+        <%= form.text_field :client %>
+
+        <%= form.label :agency, "Agency" %>
+        <%= form.text_field :agency %>
+
+        <%= form.label :label, "Main Image" %>
+        <%= form.file_field :main_image %>
+
+        <%= form.label :label, "Thumbnail Large" %>
+        <%= form.file_field :thumbnail_lrg %>
+
+        <%= form.label :label, "Thumbnail Small" %>
+        <%= form.file_field :thumbnail_smcategory %>
+
+        <%= form.submit "Create" %>
+
+
+      <% end %>
+</div>

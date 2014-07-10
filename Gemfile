@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'simple_form'
 gem 'font-awesome-rails'
+gem "paperclip", "~> 4.1"
 
 group :development do
   gem "better_errors"

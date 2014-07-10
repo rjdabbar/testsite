@@ -12,3 +12,9 @@
  *= require font-awesome
  *= require_tree .
  */
+
+
+.project-form {
+  margin-left: 100px;
+  margin-top: 50px;
+}

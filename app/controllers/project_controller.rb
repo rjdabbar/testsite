@@ -10,9 +10,16 @@ class ProjectController < ApplicationController
   end
 
   def create
+    @project = params[:project]
+    if @project.save
+      redirect_to @project, notice: "Project created"
+    else
+      render action: :new
+    end
   end
 
   def new
+    @project = Project.new
   end
 
   def delete

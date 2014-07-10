@@ -6,9 +6,60 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
+<!--=== Top ===-->    
+<div id="top">
+    <div class="container">         
+        <ul id="loginbar" class="pull-right">
+        </ul>
+    </div>      
+</div>
+<!--/top-->
+<!--=== Header ===-->
+<div id="header">               
+    <div class="container"> 
+        <!-- Logo -->       
+        <div id="logo">                                             
+            <a href="http://www.rehashstudio.com"><%= image_tag "logo.png" %>
+        </div><!-- /logo -->        
+                                    
+        <!-- Menu -->       
+        <div class="navbar">                                
+            <div class="navbar-inner">                                  
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a><!-- /nav-collapse -->                                  
+                <div class="nav-collapse collapse">                                     
+                <ul class="nav">
+                    <li>
+                        <a href="we-do/" class="dropdown-toggle">we:DO →
+                        </a>
+                        <b class="caret-out"></b>                        
+                    </li>
+                    <li>
+                        <a href="we-build/" class="dropdown-toggle">we:BUILD ›
+                        </a>
+                        <b class="caret-out"></b>                        
+                    </li>
+                    <li>
+                        <a href="we-are/" class="dropdown-toggle">we:ARE ↵
+                        </a>
+                        <b class="caret-out"></b>                        
+                    </li>                          
+                </ul>
+                </div><!-- /nav-collapse -->                                
+            </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->                          
+
+    </div><!-- /container -->               
+</div><!-- /header -->     
+
+<body>
 <%= yield %>
+
+</body>
 
 <!--=== Copyright ===-->
 <div class="copyright">
@@ -29,5 +80,4 @@
 
     </div><!--/container--> 
 </div><!--/copyright--> 
-</body>
 </html>
