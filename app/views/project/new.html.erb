@@ -1,40 +1,40 @@
 
 <div class="project-form">
-      <%= simple_form_for(@project, :url => new_project_path, :action => :create , :method => :post,  :html => { :multipart => true }) do |form| %>
+     <%= form_for @project, :url => {action: :create } , :html => { :multipart => true } do |form| %>
 
-        <%= form.input :title %>
-        
+             <%= form.label :title, "Title" %>
+             <%= form.text_field :title %>
 
-        <%= form.input :headline %>
-       
+             <%= form.label :headline, "Headline" %>
+             <%= form.text_field :headline %>
 
-        <%= form.input :body %>
-        
+             <%= form.label :body, "Body" %>
+             <%= form.text_area :body %>
 
-        <%= form.label :partner, "Partner" %>
-        <%= form.text_field :partner %>
+             <%= form.label :partner, "Partner" %>
+             <%= form.text_field :partner %>
 
-        <%= form.label :excerpt, "Excerpt" %>
-        <%= form.text_field :excerpt %>
+             <%= form.label :excerpt, "Excerpt" %>
+             <%= form.text_field :excerpt %>
 
-        <%= form.label :client, "Client" %>
-        <%= form.text_field :client %>
+             <%= form.label :client, "Client" %>
+             <%= form.text_field :client %>
 
-        <%= form.label :agency, "Agency" %>
-        <%= form.text_field :agency %>
+             <%= form.label :agency, "Agency" %>
+             <%= form.text_field :agency %>
 
-        <%= form.label :label, "Main Image" %>
-        <%= form.file_field :main_image %>
+             <%= form.label :label, "Main Image" %>
+             <%= form.file_field :main_image %>
 
-        <%= form.label :label, "Thumbnail Large" %>
-        <%= form.file_field :thumbnail_lrg %>
+             <%= form.label :label, "Thumbnail Large" %>
+             <%= form.file_field :thumbnail_lrg %>
 
-        <%= form.label :label, "Thumbnail Small" %>
-        <%= form.file_field :thumbnail_smcategory %>
+             <%= form.label :label, "Thumbnail Small" %>
+             <%= form.file_field :thumbnail_smcategory %>
 
-        <%= form.submit "Create" %>
+             <%= form.submit "Create" %>
 
 
-      <% end %>
+             <% end %>
 
 </div>

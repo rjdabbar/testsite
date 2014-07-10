@@ -10,8 +10,7 @@ class ProjectController < ApplicationController
   end
 
   def create
-    raise
-    @project = params[:project]
+    @project = Project.populate_project_information_from(params[:project])
     if @project.save
       redirect_to @project, notice: "Project created"
     else
