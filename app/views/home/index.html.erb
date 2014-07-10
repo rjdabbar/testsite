@@ -100,7 +100,7 @@
                             <div class="overflow-hidden">
                                 <%= image_tag project.thumbnail_lrg %>
                             </div>
-                            <a href="../#{project.url}" class="btn-more hover-effect">more +</a>
+                            <%= link_to '<a class="btn-more hover-effect">more +</a>'.html_safe, project_path(project.url) %>
                         </div>
                         <h3><a href="../#{project.url}" class="hover-effect"></a></h3>
                     </div>

@@ -11,6 +11,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem "paperclip", "~> 4.1"
+gem 'simple_form'
 
 group :development do
   gem "better_errors"

@@ -10,6 +10,7 @@ class ProjectController < ApplicationController
   end
 
   def create
+    raise
     @project = params[:project]
     if @project.save
       redirect_to @project, notice: "Project created"
@@ -20,6 +21,7 @@ class ProjectController < ApplicationController
 
   def new
     @project = Project.new
+
   end
 
   def delete

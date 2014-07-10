@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612202053) do
+ActiveRecord::Schema.define(version: 20140710155327) do
 
   create_table "projects", force: true do |t|
     t.string   "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140612202053) do
     t.text     "thumbnail_smcategory"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "url"
   end
 
 end

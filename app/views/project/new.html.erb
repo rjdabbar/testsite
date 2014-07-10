@@ -1,15 +1,15 @@
 
 <div class="project-form">
-      <%= form_for @project, :url => project_path(:title),  :html => { :multipart => true }, action: :create do |form| %>
+      <%= simple_form_for(@project, :url => new_project_path, :action => :create , :method => :post,  :html => { :multipart => true }) do |form| %>
 
-        <%= form.label :title, "Title" %>
-        <%= form.text_field :title %>
+        <%= form.input :title %>
+        
 
-        <%= form.label :headline, "Headline" %>
-        <%= form.text_field :headline %>
+        <%= form.input :headline %>
+       
 
-        <%= form.label :body, "Body" %>
-        <%= form.text_area :body %>
+        <%= form.input :body %>
+        
 
         <%= form.label :partner, "Partner" %>
         <%= form.text_field :partner %>
@@ -36,4 +36,5 @@
 
 
       <% end %>
+
 </div>
