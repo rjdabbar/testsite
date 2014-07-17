@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
   has_attached_file :thumbnail_smcategory,  :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   has_attached_file :main_image,  :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 
-
+  attr_accessible :thumbnail_lrg, :thumbnail_smcategory, :main_image
 
 
   def self.populate_project_information_from(hash)
