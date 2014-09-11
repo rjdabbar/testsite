@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
+
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -39,7 +40,12 @@
 </head> 
 
 <body>
- 
+
+    <% if admin_signed_in? %>
+     <%= button_to "Sign Out", destroy_admin_session_path, method: :delete %>
+      <% else %>
+         <%= button_to "Sign In", admin_session_path %>
+   <% end %>
 
 <!--=== Slider ===-->
 <div class="slider-inner">

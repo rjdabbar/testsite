@@ -21,9 +21,14 @@ class ProjectController < ApplicationController
   end
 
   def new
-    @project = Project.new
 
-    
+    if admin_signed_in? 
+      @project = Project.new
+
+    else
+      redirect_to controller: :home, action: :index, :notice => "You must be logged in to create a project"
+
+    end
   end
 
   def delete
