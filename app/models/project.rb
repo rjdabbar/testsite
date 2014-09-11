@@ -5,8 +5,13 @@ class Project < ActiveRecord::Base
 
   attr_accessible :thumbnail_lrg, :thumbnail_smcategory, :main_image
 
+  validates_attachment :thumbnail_lrg, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png"]}
+  validates_attachment :thumbnail_smcategory, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png"] }
+  validates_attachment :main_image, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png"]  }
+
 
   def self.populate_project_information_from(hash)
+
     Project.create! do |p|
       p.title = hash[:title]
       p.headline = hash[:headline]

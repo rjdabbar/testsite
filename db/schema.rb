@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710155327) do
+ActiveRecord::Schema.define(version: 20140717183242) do
 
   create_table "projects", force: true do |t|
     t.string   "title"
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 20140710155327) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
+    t.string   "thumbnail_lrg_file_name"
+    t.string   "thumbnail_lrg_content_type"
+    t.integer  "thumbnail_lrg_file_size"
+    t.datetime "thumbnail_lrg_updated_at"
+    t.string   "thumbnail_smcategory_file_name"
+    t.string   "thumbnail_smcategory_content_type"
+    t.integer  "thumbnail_smcategory_file_size"
+    t.datetime "thumbnail_smcategory_updated_at"
   end
 
 end

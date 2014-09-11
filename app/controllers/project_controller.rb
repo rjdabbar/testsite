@@ -10,9 +10,11 @@ class ProjectController < ApplicationController
   end
 
   def create
+
     @project = Project.populate_project_information_from(params[:project])
+
     if @project.save
-      redirect_to @project, notice: "Project created"
+      redirect_to controller: :home, action: :index, notice: "Project created"
     else
       render action: :new
     end
@@ -21,6 +23,7 @@ class ProjectController < ApplicationController
   def new
     @project = Project.new
 
+    
   end
 
   def delete
