@@ -3,7 +3,9 @@ class ProjectController < ApplicationController
   end
 
   def show
-    @project = Project.find_by_title(params[:title].titleize)
+    
+    @projects = Project.find(params[:title])
+    @project = Project.all
   end
 
   def edit

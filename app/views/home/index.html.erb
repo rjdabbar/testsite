@@ -106,109 +106,13 @@
                             <div class="overflow-hidden">
                                 <%= image_tag project.thumbnail_lrg %>
                             </div>
-                            <%= link_to '<a class="btn-more hover-effect">more +</a>'.html_safe, project_path(project.title) %>
+                              <%= link_to "more", project, {:class => "btn-more hover-effect"} %>
                         </div>
-                        <h3><a href="../#{project.url}" class="hover-effect"><%= project.title %></a></h3>
+                        <h3><%= link_to project.title, project, { :class=>"hover-effect" } %></h3>
                     </div>
                 </li>
             <% end %>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag "mahle-slider-1.jpg" %>
-                        </div>
-                        <a class="btn-more hover-effect" href="../mahle-design/">more +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../mahle-design/">MahleDesign.com</a></h3>
-                    <i class="icon-desktop"></i><i class="icon-tablet"></i><i class="icon-mobile-phone"></i>
-                </div>
-            </li>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag "happsee-slider-1.jpg" %>
-                        </div>
-                        <a class="btn-more hover-effect" href="../happsee/">more +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../happsee/">Happsee</a></h3>
-                    <i class="icon-mobile-phone"></i>
-                </div>
-            </li>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag  "nikesb-skateeverydamnday-1.jpg"%>
-                        </div>
-                        <a class="btn-more hover-effect" href="../nike-skate-every-damn-day/">more +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../nike-runfree/">#SKATEEVERYDAMNDAY</a></h3>
-                    <i class="icon-film"></i><i class="icon-exchange"></i><i class="icon-camera"></i><i class="icon-cloud-upload"></i>
-                </div>
-            </li>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag "grandlarge-2.jpg" %>
-                        </div>
-                        <a class="btn-more hover-effect" href="../grandlarge/">more +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../grandlarge/">GrandLargeInc.com</a></h3>
-                    <i class="icon-desktop"></i><i class="icon-laptop"></i><i class="icon-tablet"></i><i class="icon-mobile-phone"></i>
-                </div>
-            </li>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag "runfree-2.jpg" %>
-                        </div>
-                        <a class="btn-more hover-effect" href="../nike-runfree/">more +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../nike-runfree/">Nike #RUNFREE</a></h3>
-                    <i class="icon-dashboard"></i><i class="icon-exchange"></i><i class="icon-camera"></i><i class="icon-road"></i>
-                </div>
-            </li>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag "bos-1.jpg" %>
-                        </div>
-                        <a class="btn-more hover-effect" href="../book-of-sarth/">more +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../book-of-sarth/">Book of Sarth</a></h3>
-                    <i class="icon-music"></i><i class="icon-tablet"></i><i class="icon-mobile-phone"></i>
-                </div>
-            </li>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag "ghostradio-2.jpg" %>                       
-                        </div>
-                        <a class="btn-more hover-effect" href="../ghost-radio/">view +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../ghost-radio/">Ghost Radio</a></h3>
-                    <i class="icon-tablet"></i><i class="icon-mobile-phone"></i>
-                </div>
-            </li>
-            <li class="span3">
-                <div class="thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <%= image_tag "gralbum-2.jpg" %>                        
-                        </div>
-                        <a class="btn-more hover-effect" href="../gralbum-collective/">view +</a>                   
-                    </div>
-                    <h3><a class="hover-effect" href="../gralbum-collective/">Gralbum Collective</a></h3>
-                    <%= fa_icon "icon-tablet" %>
-                    <!-- <i class="icon-music"></i><i class="icon-tablet"></i><i class="icon-mobile-phone"></i> -->
-                </div>
-            </li>
+           
         </ul><!--/thumbnails-->
         <!-- //End Recent Works -->
 
