@@ -9,7 +9,14 @@ class ProjectController < ApplicationController
   end
 
   def edit
-  end
+
+    if admin_signed_in? 
+      @project = Project.edit
+
+    else
+      redirect_to controller: :home, action: :index, :notice => "You must be logged in to edit a project"
+   end
+ end
 
   def create
 
