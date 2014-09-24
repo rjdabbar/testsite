@@ -1,17 +1,19 @@
 class ProjectController < ApplicationController
   def index
+     @projects = Project.get_ordered_list
+
   end
 
   def show
     
-    @projects = Project.find(params[:title])
-    @project = Project.all
+    @project = Project.find(params[:id])
+    @projects = Project.all
   end
 
   def edit
 
     if admin_signed_in? 
-      @project = Project.edit
+      @project = Project.find(params[:id])
 
     else
       redirect_to controller: :home, action: :index, :notice => "You must be logged in to edit a project"

@@ -2,10 +2,10 @@
 <div id="body">
   <div class="breadcrumbs margin-bottom-40">
       <div class="container">
-            <h1 class="color-green pull-left"><%= @projects.title %></h1>
+            <h1 class="color-green pull-left" ><%= @project.title %></h1>
             <ul class="pull-right breadcrumb">
                 <li><a href="http://www.rehashstudio.com">Home</a> <span class="divider">/</span></li>
-                <li class="active"><%= @projects.title %></li>
+                <li class="active"><%= @project.title %></li>
             </ul>
         </div><!--/container-->
     </div><!--/breadcrumbs-->
@@ -15,14 +15,14 @@
       <!-- Carousel -->
             <div class="da-img span8">
                 <div class="videoUiWrapper thumbnail">
-                    <%= image_tag @projects.main_image %>
+                    <%= image_tag @project.main_image %>
                 </div>
             </div>
             <!-- //End Tabs and Carousel -->
             
             <div class="span4">
-              <h3> <%= @projects.headline %> </h3>
-              <p>  <%= @projects.body %> <p>
+              <h3> <%= @project.headline %> </h3>
+              <p>  <%= @project.body %> <p>
             </div> 
 
         </div><!--/row-fluid-->
@@ -32,7 +32,7 @@
         <!-- Recent Works --><br />
         <div class="headline"><h3>Recent Work</h3></div>
         <ul class="thumbnails">
-            <% @project.each do |project| %>
+            <% @projects.each do |project| %>
                 <li class="span3">
                     <div class="thumbnail-style thumbnail-kenburn">
                         <div class="thumbnail-img">

@@ -27,6 +27,16 @@ class Project < ActiveRecord::Base
 
   end
 
+  def self.get_ordered_list
+    return_list = []
+    projects = Project.all
+    
+    return return_list = projects.reverse!
+    
+  end
 
+    def to_param
+    "#{id} #{title}".parameterize
+  end
 
 end

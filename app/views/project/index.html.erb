@@ -1,2 +1,45 @@
-<h1>Project#index</h1>
-<p>Find me in app/views/project/index.html.erb</p>
+<div id="top">  
+</div>
+<div class="breadcrumbs margin-bottom-40">
+      <div class="container">
+            <h1 class="color-green pull-left" > What we love to do. </h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="http://www.rehashstudio.com">Home</a> <span class="divider">/</span></li>
+                <li class="active"></li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+
+
+<div class="container portfolio-columns">   
+
+   <% @projects.each_with_index do |project, index| %>
+       <% if index % 2 == 0 %>
+         
+	       <div class="view view-tenth span6 work-responsive" onclick="void(0)"> 
+	 	 	  <%= image_tag project.thumbnail_lrg%>
+	 	        <div class="mask">
+                    <h2> <%= project.title %></h2>
+                    <p> <%= project.headline %></p>
+
+                   <a> <%= link_to "Read More", project, { :class=>"info" } %></a>
+                
+                </div> 
+		  
+	      </div>
+ 	   <% else %>
+		   <div class="view view-tenth span6 work-responsive" onclick="void(0)">
+		      <%= image_tag project.thumbnail_lrg%>
+		         <div class="mask">
+                    <h2> <%= project.title %></h2>
+                    <p> <%= project.headline %></p>
+
+                    <a> <%= link_to "Read More", project, { :class=>"info" } %></a>
+
+                
+	            </div>    
+	       </div>   
+       <% end %>
+   <% end %>
+  </div> 
+</div>
