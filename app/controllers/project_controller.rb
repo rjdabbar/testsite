@@ -6,7 +6,7 @@ class ProjectController < ApplicationController
 
   def show
     #@project = Project.find(params[:id])
-    @project = Project.find_by title: params[:title]
+    @project = Project.find_by url: params[:url]
     @projects = Project.all
 
   end
@@ -20,6 +20,25 @@ class ProjectController < ApplicationController
       redirect_to controller: :home, action: :index, :notice => "You must be logged in to edit a project"
    end
  end
+
+ def update
+
+    # @project = Project.update_project_information_from(params[:project], params[:id])
+    # raise 
+
+    hash = params[:project]
+    project = Project.edit_vars(params[:id], hash)
+
+    # @project = project
+    # if @project.save
+      redirect_to controller: :home, action: :index, notice: "Project Updated"
+    # else
+    #   render action: :edit
+    # end
+
+
+ end
+
 
   def create
 
