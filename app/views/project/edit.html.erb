@@ -1,4 +1,5 @@
 <div class="project-form">
+
      <%= form_for @project, :url => {action: :update } , :html => { :multipart => true,  :method => :put } do |form| %>
 
              <%= form.label :title, "Title" %>
@@ -37,7 +38,9 @@
              <%= form.label :label, "Thumbnail Small" %>
              <%= form.file_field :thumbnail_smcategory %>
 
-             <%= form.submit "Edit" %>
+             <%= hidden_field_tag :id, @project[:id] %>
+
+             <%= form.submit "Edit" %> 
 
 
              <% end %>

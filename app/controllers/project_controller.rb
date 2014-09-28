@@ -6,7 +6,7 @@ class ProjectController < ApplicationController
 
   def show
     #@project = Project.find(params[:id])
-    @project = Project.find_by url: params[:url]
+    @project = Project.find_by_url(params[:url])
     @projects = Project.all
 
   end
@@ -14,7 +14,10 @@ class ProjectController < ApplicationController
   def edit
 
     if admin_signed_in? 
-      @project = Project.find(params[:id])
+      #@project = Project.find(params[:id])
+      
+       @project = Project.find_by_url(params[:url])
+
 
     else
       redirect_to controller: :home, action: :index, :notice => "You must be logged in to edit a project"
@@ -24,17 +27,19 @@ class ProjectController < ApplicationController
  def update
 
     # @project = Project.update_project_information_from(params[:project], params[:id])
-    # raise 
 
-    hash = params[:project]
-    project = Project.edit_vars(params[:id], hash)
+ #  if( (@project = Project.find_by_title(params[:project][:title]) ) == nil)
+    
+   # project_id = project_from_title[:id]
+  #  hash = params[:project]
 
-    # @project = project
-    # if @project.save
+    @project = Project.edit_vars(params[:id], params[:project])
+
+   # if @project.save
       redirect_to controller: :home, action: :index, notice: "Project Updated"
-    # else
-    #   render action: :edit
-    # end
+    #else
+    #  render action: :edit
+    #end
 
 
  end
@@ -62,6 +67,7 @@ class ProjectController < ApplicationController
     end
   end
 
-  def delete
+  def delete 
+  raise   
   end
 end
