@@ -43,9 +43,7 @@
 
     <% if admin_signed_in? %>
      <%= button_to "Sign Out", destroy_admin_session_path, method: :delete %>
-      <% else %>
-         <%= button_to "Sign In", admin_session_path %>
-   <% end %>
+    <% end %>
 
 <!--=== Slider ===-->
 <div class="slider-inner">
@@ -99,7 +97,8 @@
         <!-- Recent Works --><br />
         <div class="headline"><h3>Recent Work</h3></div>
         <ul class="thumbnails">
-            <% @projects.each do |project| %>
+            <% @projects.get_ordered_list.each do |project| %>
+             <%if project.flag != true %>
                 <li class="span3">
                     <div class="thumbnail-style thumbnail-kenburn">
                         <div class="thumbnail-img">
@@ -111,12 +110,19 @@
                         <h3><%= link_to project.title, project, { :class=>"hover-effect" } %></h3>
                     </div>
                 </li>
-            <% end %>
-           
-        </ul><!--/thumbnails-->
+            
+           <% end %>
+
+        <% end %>
+            </ul><!--/thumbnails-->
+             
+  
+
         <!-- //End Recent Works -->
 
-  </div><!--/container-->   
+            
+  </div><!--/container--> 
+  
 </div><!--/body-->
 
 

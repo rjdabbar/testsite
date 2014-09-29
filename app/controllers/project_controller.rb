@@ -7,7 +7,7 @@ class ProjectController < ApplicationController
   def show
     #@project = Project.find(params[:id])
     @project = Project.find_by_url(params[:url])
-    @projects = Project.all
+    @projects = Project.get_ordered_list
 
   end
 
@@ -47,7 +47,7 @@ class ProjectController < ApplicationController
 
   def create
 
-    @project = Project.populate_project_information_from(params[:project])
+  @project = Project.populate_project_information_from(params[:project])
 
     if @project.save
       redirect_to controller: :home, action: :index, notice: "Project created"
@@ -68,6 +68,12 @@ class ProjectController < ApplicationController
   end
 
   def delete 
+    project = Project.find_by_url(params[:url])
+    project_id = project[:id]
+    delete_project_id(project_id)
   raise   
   end
 end
+
+
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923234617) do
+ActiveRecord::Schema.define(version: 20140928174449) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 20140923234617) do
     t.integer  "thumbnail_smcategory_file_size"
     t.datetime "thumbnail_smcategory_updated_at"
     t.string   "tag"
+    t.boolean  "flag"
   end
 
 end

@@ -33,17 +33,19 @@
         <div class="headline"><h3>Recent Work</h3></div>
         <ul class="thumbnails">
             <% @projects.each do |project| %>
-                <li class="span3">
-                    <div class="thumbnail-style thumbnail-kenburn">
-                        <div class="thumbnail-img">
-                            <div class="overflow-hidden">
-                                <%= image_tag project.thumbnail_lrg %>
-                            </div>
-                            <%= link_to "more", project, {:class => "btn-more hover-effect"} %>
-                        </div>
-                        <h3><%= link_to project.title, project, { :class=>"hover-effect" } %></h3><!-- class="hover-effect" -->
-                    </div>
-                </li>
+                <%if project.flag != true %>
+                    <li class="span3">
+                         <div class="thumbnail-style thumbnail-kenburn">
+                              <div class="thumbnail-img">
+                                  <div class="overflow-hidden">
+                                        <%= image_tag project.thumbnail_lrg %>  
+                                  </div>
+                                        <%= link_to "more", project, {:class => "btn-more hover-effect"} %>
+                              </div>
+                                      <h3><%= link_to project.title, project, { :class=>"hover-effect" } %></h3><!-- class="hover-effect" -->
+                         </div>
+                     </li>
+                 <% end %>
             <% end %>
            
         </ul><!--/thumbnails-->

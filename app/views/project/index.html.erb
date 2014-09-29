@@ -5,7 +5,7 @@
             <h1 class="color-green pull-left" > What we love to do. </h1>
             <ul class="pull-right breadcrumb">
                 <li><a href="http://www.rehashstudio.com">Home</a> <span class="divider">/</span></li>
-                <li class="active"></li>
+                <li class="active">we:DO →</li>
             </ul>
         </div><!--/container-->
     </div><!--/breadcrumbs-->
@@ -14,8 +14,9 @@
 <div class="container portfolio-columns">   
 
    <% @projects.each_with_index do |project, index| %>
+    <% if project.flag != true %>
        <% if index % 2 == 0 %>
-         
+        
 	       <div class="view view-tenth span6 work-responsive" onclick="void(0)"> 
 	 	 	  <%= image_tag project.thumbnail_lrg%>
 	 	        <div class="mask">
@@ -39,6 +40,7 @@
                 
 	            </div>    
 	       </div>   
+        <% end %> 
        <% end %>
    <% end %>
   </div> 

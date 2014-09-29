@@ -33,20 +33,28 @@
                 </a><!-- /nav-collapse -->                                  
                 <div class="nav-collapse collapse">                                     
                 <ul class="nav">
+                     <li>
+<!--                     <a href="we-are/" class="dropdown-toggle">we:ARE ↵
+                        </a> -->
+                        <%= link_to "we:DO →", project_home_path, {:class => "dropdown-toggle"} %>
+                        <b class="caret-out"></b>                        
+                    </li>
+                    <!--
                     <li>
                         <a href="we-do/" class="dropdown-toggle">we:DO →
                         </a>
                         <b class="caret-out"></b>                        
                     </li>
-                    <li>
+                       <li>
                         <a href="we-build/" class="dropdown-toggle">we:BUILD ›
                         </a>
                         <b class="caret-out"></b>                        
-                    </li>
+                    </li> 
                     <li>
-<!--                     <a href="we-are/" class="dropdown-toggle">we:ARE ↵
+                         <a href="we-are/" class="dropdown-toggle">we:ARE ↵
                         </a> -->
-                        <%= link_to "we:ARE", about_path, {:class => "dropdown-toggle"} %>
+                    <li>   
+                        <%= link_to "we:ARE ↵", about_path, {:class => "dropdown-toggle"} %>
                         <b class="caret-out"></b>                        
                     </li>                          
                 </ul>

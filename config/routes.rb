@@ -6,7 +6,8 @@ TestSite::Application.routes.draw do
 
 
   root "home#index"
-  get '/about' => 'home#about'
+  get '/we-are' => 'home#about', as: :about
+  get '/we-do' => 'project#index', as: :project_home
 
   get 'new' => 'project#new'
   get 'project/:url' => 'project#show', as: :projects
