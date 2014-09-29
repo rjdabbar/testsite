@@ -14,22 +14,24 @@
 <div class="container portfolio-columns">   
 
    <% @projects.each_with_index do |project, index| %>
+
     <% if project.flag != true %>
-       <% if index % 2 == 0 %>
-        
+      <% if index % 2 == 0 %>
+          
 	       <div class="view view-tenth span6 work-responsive" onclick="void(0)"> 
-	 	 	  <%= image_tag project.thumbnail_lrg%>
+	 	 	     <%= image_tag project.thumbnail_lrg%>
 	 	        <div class="mask">
                     <h2> <%= project.title %></h2>
                     <p> <%= project.headline %></p>
 
                    <a> <%= link_to "Read More", project, { :class=>"info" } %></a>
                 
-                </div> 
+            </div> 
 		  
 	      </div>
+
  	   <% else %>
-		   <div class="view view-tenth span6 work-responsive" onclick="void(0)">
+		    <div class="view view-tenth span6 work-responsive" onclick="void(0)">
 		      <%= image_tag project.thumbnail_lrg%>
 		         <div class="mask">
                     <h2> <%= project.title %></h2>
@@ -38,10 +40,13 @@
                     <a> <%= link_to "Read More", project, { :class=>"info" } %></a>
 
                 
-	            </div>    
-	       </div>   
-        <% end %> 
-       <% end %>
+	           </div>
+
+	       </div>  
+
+        <% end %>
+      <% end %> 
+
    <% end %>
-  </div> 
+  
 </div>

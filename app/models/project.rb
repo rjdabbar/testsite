@@ -13,18 +13,18 @@ class Project < ActiveRecord::Base
   def self.populate_project_information_from(hash)
 
     Project.create! do |p|
-      p.title = hash[:title]
-      p.headline = hash[:headline]
-      p.body = hash[:body]
-      p.partner = hash[:partner]
-      p.excerpt = hash[:excerpt]
-      p.client = hash[:client]
-      p.agency = hash[:agency]
-      p.main_image = hash[:main_image]
-      p.thumbnail_smcategory = hash[:thumbnail_smcategory]
-      p.thumbnail_lrg = hash[:thumbnail_lrg]
-      p.url = hash[:title].parameterize
-      p.flag = false
+    p.title = hash[:title]
+    p.headline = hash[:headline]
+    p.body = hash[:body]
+    p.partner = hash[:partner]
+    p.excerpt = hash[:excerpt]
+    p.client = hash[:client]
+    p.agency = hash[:agency]
+    p.main_image = hash[:main_image]
+    p.thumbnail_smcategory = hash[:thumbnail_smcategory]
+    p.thumbnail_lrg = hash[:thumbnail_lrg]
+    p.url = hash[:title].parameterize
+    p.flag = false
 
     end
 
@@ -46,18 +46,9 @@ class Project < ActiveRecord::Base
     project.title = hash[:title]
     project.flag = hash[:flag]
 
-    project.save!
+    return project
 
   end
-
-
-# def self.update_project_information_from(hash, id)
-#     # raise
-#     project = Project.find(id)
-
-#     Project.update(id, project.url) 
-    
-# end
 
   def self.get_ordered_list
     return_list = []
@@ -71,8 +62,7 @@ class Project < ActiveRecord::Base
    
    def to_param
    url
-   #"#{title}".parameterize
-   #"#{id} #{title}".parameterize
+
    end
 
 end
