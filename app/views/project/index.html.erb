@@ -10,15 +10,17 @@
         </div><!--/container-->
     </div><!--/breadcrumbs-->
 
-
 <div class="container portfolio-columns">   
-
+  
    <% @projects.each_with_index do |project, index| %>
+      
 
-    <% if project.flag != true %>
       <% if index % 2 == 0 %>
-          
+        <div class="row-fluid"> 
+        
+
 	       <div class="view view-tenth span6 work-responsive" onclick="void(0)"> 
+
 	 	 	     <%= image_tag project.thumbnail_lrg%>
 	 	        <div class="mask">
                     <h2> <%= project.title %></h2>
@@ -28,9 +30,11 @@
                 
             </div> 
 		  
-	      </div>
+	        </div>
 
  	   <% else %>
+        
+
 		    <div class="view view-tenth span6 work-responsive" onclick="void(0)">
 		      <%= image_tag project.thumbnail_lrg%>
 		         <div class="mask">
@@ -42,11 +46,11 @@
                 
 	           </div>
 
-	       </div>  
+          </div>
+	    
+         </div>  
 
-        <% end %>
       <% end %> 
-
    <% end %>
-  
+
 </div>

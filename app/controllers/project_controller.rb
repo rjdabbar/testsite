@@ -24,7 +24,7 @@ class ProjectController < ApplicationController
     @project = Project.edit_vars(params[:id], params[:project])
 
    if @project.save!
-      redirect_to controller: :home, action: :index, notice: "Project Updated"
+      redirect_to controller: :home, action: :index, notice: "Project updated"
    else
       render action: :edit
    end
@@ -59,11 +59,11 @@ class ProjectController < ApplicationController
     @project = Project.find_by_url(params[:url])
 
     if @project.delete
-      redirect_to controller: :home, action: :index, notice: "Project Deleted"
+      redirect_to controller: :home, action: :index, notice: "Project deleted"
    else
       redirect_to controller: :home, action: :index, notice: "Project could not be deleted"
    end
-    
+
   end
 end
 

@@ -31,22 +31,22 @@ class Project < ActiveRecord::Base
   end
 
   def self.edit_vars(id, hash)
-    project = Project.find(id)
-    project.title = hash[:title]
-    project.headline = hash[:headline]
-    project.body = hash[:body]
-    project.partner = hash[:partner]
-    project.excerpt = hash[:excerpt]
-    project.client = hash[:client]
-    project.agency = hash[:agency]
-    project.main_image = hash[:main_image]
-    project.thumbnail_smcategory = hash[:thumbnail_smcategory]
-    project.thumbnail_lrg = hash[:thumbnail_lrg]
-    project.url = hash[:url]
-    project.title = hash[:title]
-    project.flag = hash[:flag]
+    p = Project.find(id)
+    p.title = hash[:title]
+    p.headline = hash[:headline]
+    p.body = hash[:body]
+    p.partner = hash[:partner]
+    p.excerpt = hash[:excerpt]
+    p.client = hash[:client]
+    p.agency = hash[:agency]
+    p.main_image = hash[:main_image]
+    p.thumbnail_smcategory = hash[:thumbnail_smcategory]
+    p.thumbnail_lrg = hash[:thumbnail_lrg]
+    p.url = hash[:url]
+    p.title = hash[:title]
+    p.flag = hash[:flag]
 
-    return project
+    return p
 
   end
 
